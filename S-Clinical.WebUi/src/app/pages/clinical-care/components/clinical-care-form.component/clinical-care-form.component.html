@@ -1,0 +1,67 @@
+<div class="form-container">
+
+  @if(loading()) {
+    <div class="skeleton-form p-4">
+      <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+      <p-skeleton height="2.5rem" styleClass="mb-3"></p-skeleton>
+      <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+      <p-skeleton height="2.5rem" styleClass="mb-3"></p-skeleton>
+    </div>
+  }
+
+  @if(!loading()) {
+    <form [formGroup]="careForm" (ngSubmit)="save()" class="p-4">
+
+      <div class="field-group">
+        <label for="patientId">Paciente *</label>
+        <div class="input-group">
+          
+          <p-select id="patientId"
+                      formControlName="patientId"
+                      [options]="patients()"
+                      optionLabel="name"
+                      optionValue="id"
+                      placeholder="Selecione um paciente"
+                      [showClear]="true"
+                      styleClass="flex-1">
+          </p-select>
+          
+          <p-button type="button"
+                    icon="pi pi-plus"
+                    label="Novo"
+                    pTooltip="Cadastrar novo paciente"
+                    tooltipPosition="top"
+                    styleClass="p-button-outlined"
+                    (click)="redirectToPatientForm()">
+          </p-button>
+        </div>
+        @if (f['patientId'].invalid && f['patientId'].touched) {
+          <p-message severity="error" text="Paciente é obrigatório"></p-message>
+        }
+      </div>
+
+      <div class="field-group">
+        <label for="sequentialNumber">Número Sequencial *</label>
+        <input id="sequentialNumber"
+               type="text"
+               pInputText
+               formControlName="sequentialNumber" />
+        @if (f['sequentialNumber'].invalid && f['sequentialNumber'].touched) {
+          <p-message severity="error" text="Número sequencial é obrigatório"></p-message>
+        }
+      </div>
+
+      <div class="dialog-footer">
+        <p-button label="Cancelar"
+                  [text]="true"
+                  (click)="closeModal(false)">
+        </p-button>
+        <p-button label="Salvar"
+                  type="submit"
+                  [loading]="loading()"
+                  [disabled]="careForm.invalid"> 
+                  </p-button>
+      </div>
+    </form>
+  }
+</div>

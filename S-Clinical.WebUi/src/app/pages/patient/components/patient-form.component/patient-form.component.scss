@@ -1,0 +1,30 @@
+/* Reutilize o mesmo estilo do FormClinicalCareComponent */
+:host {
+  display: block;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+  margin-bottom: 1rem; // Um pouco menos de espaço
+
+  label {
+    font-weight: 500;
+  }
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--surface-border);
+}
+
+/* Garante 100% de largura nos inputs */
+input[pInputText],
+:host ::ng-deep .p-dropdown {
+  width: 100%;
+}

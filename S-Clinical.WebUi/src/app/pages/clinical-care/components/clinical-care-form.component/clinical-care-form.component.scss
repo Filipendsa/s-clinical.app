@@ -1,0 +1,58 @@
+:host ::ng-deep .care-form-dialog {
+  .p-dialog-content {
+    background: var(--p-green-100);
+    padding: 1.5rem;
+  }
+
+  .p-dialog-header {
+    background: var(--p-green-100);
+    border-bottom: 1px solid var(--p-green-200);
+  }
+
+  .dialog-footer {
+     background: var(--p-green-100);
+  }
+
+  .p-dialog-header-title {
+    color: var(--text-color);
+  }
+
+  label {
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  .p-button-text {
+    color: var(--primary-color);
+  }
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem; 
+
+  p-dropdown.flex-1 {
+    flex: 1;
+  }
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--p-green-200);
+}
+
+input[pInputText],
+:host ::ng-deep .p-dropdown {
+  width: 100%;
+}

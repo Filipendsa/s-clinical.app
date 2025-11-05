@@ -1,0 +1,112 @@
+<div class="landing-container">
+    <app-toolbar></app-toolbar>
+    <div class="page-content-wrapper">
+        <p-breadcrumb [model]="breadcrumbItems"
+                      [home]="{ icon: 'pi pi-home', routerLink: '/' }"></p-breadcrumb>
+        <div class="page-content">
+            <p-card>
+                <ng-template pTemplate="title">
+                    Gestão de Triagem
+                </ng-template>
+                <ng-template pTemplate="subtitle">
+                    Selecione um paciente na fila para iniciar a classificação de risco.
+                </ng-template>
+
+                <p-tabs value="0">
+                    <p-tablist>
+                        <p-tab value="0">Aguardando Triagem</p-tab>
+                        <p-tab value="1">Triagens Concluídas</p-tab>
+                    </p-tablist>
+                    <p-tabpanels>
+                        <p-tabpanel header="Aguardando Triagem"
+                                    value="0">
+                            <p-table [value]="awaitingTriage()"
+                                     [tableStyle]="{'min-width': '50rem'}"
+                                     styleClass="p-datatable-striped">
+
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Senha (Ordem)</th>
+                                        <th>Paciente</th>
+                                        <th>Hora da Chegada</th>
+                                        <th style="width: 12rem">Ações</th>
+                                    </tr>
+                                </ng-template>
+
+                                <ng-template pTemplate="body"
+                                             let-care>
+                                    <tr>
+                                        <td><strong>#{{care.sequentialNumber}}</strong></td>
+                                        <td>{{care.patient.name}}</td>
+                                        <td>{{care.dateTimeArrival | date: 'dd/MM/yyyy HH:mm'}}</td>
+                                        <td>
+                                            <p-button label="Preencher Triagem"
+                                                      icon="pi pi-check-square"
+                                                      (click)="openTriageForm(care.id)">
+                                            </p-button>
+                                        </td>
+                                    </tr>
+                                </ng-template>
+
+                                <ng-template pTemplate="emptymessage">
+                                    <tr>
+                                        <td colspan="4">Nenhum paciente aguardando triagem.</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </p-tabpanel>
+
+                        <p-tabpanel header="Triagens Concluídas"
+                                    value="1">
+                            <p-table [value]="completedTriage()"
+                                     [paginator]="true"
+                                     [rows]="10"
+                                     [tableStyle]="{'min-width': '50rem'}"
+                                     styleClass="p-datatable-striped">
+
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Paciente</th>
+                                        <th>Sintomas (Resumo)</th>
+                                        <th>Prioridade (Cor)</th>
+                                        <th style="width: 10rem">Ações</th>
+                                    </tr>
+                                </ng-template>
+
+                                <ng-template pTemplate="body"
+                                             let-care>
+                                    <tr>
+                                        <td>{{care.patient.name}}</td>
+                                        <td>{{care.triage?.symptoms | slice:0:50}}...</td>
+                                        <td>
+                                            <p-tag [value]="care.triage?.priority"
+                                                   severity="danger"></p-tag>
+                                        </td>
+                                        <td>
+                                            <p-button icon="pi pi-pencil"
+                                                      styleClass="p-button-text p-button-rounded"
+                                                      (click)="openEditForm(care.triage?.id)">
+                                            </p-button>
+                                            <p-button icon="pi pi-trash"
+                                                      styleClass="p-button-text p-button-rounded p-button-danger"
+                                                      (click)="deleteTriage(care.triage?.id)">
+                                            </p-button>
+                                        </td>
+                                    </tr>
+                                </ng-template>
+
+                                <ng-template pTemplate="emptymessage">
+                                    <tr>
+                                        <td colspan="4">Nenhuma triagem concluída hoje.</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </p-tabpanel>
+                    </p-tabpanels>
+                </p-tabs>
+            </p-card>
+        </div>
+    </div>
+</div>
+<p-toast />
+<p-confirmdialog />

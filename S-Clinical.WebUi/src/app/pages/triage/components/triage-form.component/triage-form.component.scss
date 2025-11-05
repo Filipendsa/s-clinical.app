@@ -1,0 +1,42 @@
+:host {
+    display: block;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    margin-bottom: 1.5rem;
+
+    label {
+        font-weight: 500;
+    }
+}
+
+.dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--surface-border);
+}
+
+input[pInputText],
+textarea[pInputTextarea],
+:host ::ng-deep .p-dropdown,
+:host ::ng-deep .p-inputnumber {
+    width: 100%;
+}
+
+.p-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+.p-col-6 {
+    flex: 0 0 50%;
+    width: 50%;
+    padding: 0 0.5rem;
+}

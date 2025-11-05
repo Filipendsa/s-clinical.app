@@ -1,0 +1,104 @@
+<div class="form-container">
+    <form [formGroup]="triageForm"
+          (ngSubmit)="save()"
+          class="p-4">
+
+        <div class="field-group">
+            <label for="speciality">Especialidade (Encaminhamento) *</label>
+            <p-select id="speciality"
+                      formControlName="speciality"
+                      [options]="specialtyOptions"
+                      optionLabel="label"
+                      optionValue="value"
+                      placeholder="Selecione a especialidade">
+            </p-select>
+            @if (f['speciality'].invalid && f['speciality'].touched) {
+            <p-message severity="error"
+                       text="Especialidade é obrigatória"></p-message>
+            }
+        </div>
+
+        <div class="field-group">
+            <label for="priority">Classificação de Risco (Prioridade) *</label>
+            <p-select id="priority"
+                        formControlName="priority"
+                        [options]="priorityOptions"
+                        optionLabel="label"
+                        optionValue="value"
+                        placeholder="Classificação manual de risco">
+            </p-select>
+            @if (f['priority'].invalid && f['priority'].touched) {
+            <p-message severity="error"
+                       text="Prioridade é obrigatória"></p-message>
+            }
+        </div>
+
+        <div class="field-group">
+            <label for="symptoms">Sintomas (Descrição Detalhada) *</label>
+            <textarea id="symptoms"
+                      pInputTextarea
+                      formControlName="symptoms"
+                      rows="4"
+                      placeholder="Ex: Dor no peito, falta de ar, febre alta há 2 dias...">
+      </textarea>
+            @if (f['symptoms'].invalid && f['symptoms'].touched) {
+            <p-message severity="error"
+                       text="Sintomas são obrigatórios (mín. 10 caracteres)"></p-message>
+            }
+        </div>
+
+        <div class="p-grid p-formgrid p-fluid">
+            <div class="p-col-6 field-group">
+                <label for="weight">Peso (kg) *</label>
+                <p-inputNumber id="weight"
+                               formControlName="weight"
+                               mode="decimal"
+                               [minFractionDigits]="1"
+                               [maxFractionDigits]="2"
+                               suffix=" kg">
+                </p-inputNumber>
+                @if (f['weight'].invalid && f['weight'].touched) {
+                <p-message severity="error"
+                           text="Peso inválido"></p-message>
+                }
+            </div>
+            <div class="p-col-6 field-group">
+                <label for="height">Altura (m) *</label>
+                <p-inputNumber id="height"
+                               formControlName="height"
+                               mode="decimal"
+                               [minFractionDigits]="2"
+                               [maxFractionDigits]="2"
+                               suffix=" m">
+                </p-inputNumber>
+                @if (f['height'].invalid && f['height'].touched) {
+                <p-message severity="error"
+                           text="Altura inválida"></p-message>
+                }
+            </div>
+        </div>
+
+        <div class="field-group">
+            <label for="bloodPressure">Pressão Arterial *</label>
+            <input id="bloodPressure"
+                   type="text"
+                   pInputText
+                   formControlName="bloodPressure"
+                   placeholder="Ex: 120/80" />
+            @if (f['bloodPressure'].invalid && f['bloodPressure'].touched) {
+            <p-message severity="error"
+                       text="Pressão é obrigatória"></p-message>
+            }
+        </div>
+
+        <div class="dialog-footer">
+            <p-button label="Cancelar"
+                      [text]="true"
+                      (click)="closeModal(false)"></p-button>
+            <p-button label="Salvar e Classificar"
+                      type="submit"
+                      [loading]="isLoading()"
+                      [disabled]="triageForm.invalid"></p-button>
+        </div>
+    </form>
+</div>

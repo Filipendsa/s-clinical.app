@@ -1,0 +1,67 @@
+<div class="landing-container">
+    <app-toolbar></app-toolbar>
+    <div class="page-content-wrapper">
+        <p-breadcrumb [model]="breadcrumbItems" [home]="{ icon: 'pi pi-home', routerLink: '/' }"></p-breadcrumb>
+        <div class="page-content">
+            <p-card>
+                <ng-template pTemplate="title">
+                    Gestão de Atendimentos
+                </ng-template>
+                <ng-template pTemplate="subtitle">
+                     Aqui você pode gerenciar, adicionar, editar ou remover
+                     os atendimentos clínicos em andamento.
+                </ng-template>
+                <div class="toolbar-wrapper">
+                    <p-button 
+                        label="Novo Atendimento" 
+                        icon="pi pi-plus" 
+                        (click)="openFormModal()">
+                    </p-button>
+                </div>
+                <p-table 
+                    [value]="clinicalCares() || []" 
+                    [paginator]="true" 
+                    [rows]="10" 
+                    [tableStyle]="{'min-width': '50rem'}"
+                    styleClass="p-datatable-striped"> 
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>ID</th>
+                            <th>Paciente</th>
+                            <th>Status</th>
+                            <th>Chegada</th>
+                            <th style="width: 10rem">Ações</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-care>
+                        <tr>
+                            <td>#{{care.id}}</td>
+                            <td>{{care.patient.name}}</td>
+                            <td>
+                                <p-tag [value]="care.status" [severity]="getStatusSeverity(care.status)"></p-tag>
+                            </td>
+                            <td>{{care.dateTimeArrival | date: 'dd/MM/yyyy HH:mm'}}</td>
+                            <td>
+                                <p-button icon="pi pi-pencil"
+                                                    styleClass="p-button-text p-button-rounded"
+                                                    (click)="openFormModal(care.id)">
+                                </p-button>
+                                <p-button icon="pi pi-trash"
+                                                    styleClass="p-button-text p-button-rounded p-button-danger"
+                                                    (click)="deleteCare(care.id)">
+                                </p-button>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="emptymessage">
+                        <tr>
+                            <td colspan="5">Nenhum atendimento encontrado.</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </p-card>
+        </div>
+    </div>
+</div>
+<p-toast />
+<p-confirmdialog />

@@ -1,0 +1,14 @@
+  <p-toolbar styleClass="hero-toolbar">
+    <ng-template pTemplate="start">
+      <nav class="main-menu">
+        <a href="/" class="logo">S-Clinical</a>
+        <a href="/atendimento">Atendimento</a>
+        <a href="/paciente">Paciente</a>
+        <a href="/triagem">Triagem</a>
+      </nav>
+    </ng-template>
+
+    <ng-template pTemplate="end">
+      <p-button label="Contato" (onClick)="navigateTo('https://www.linkedin.com/in/filipe-nogueira07/')" [rounded]="true" size="large"></p-button>
+    </ng-template>
+  </p-toolbar>

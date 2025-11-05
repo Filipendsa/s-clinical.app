@@ -1,0 +1,55 @@
+<div class="landing-container">
+  <app-toolbar></app-toolbar>
+  <main class="hero-content">
+    <div class="hero-text">
+      <span class="small-title">°Hospitalar</span>
+      <h1>O melhor app hospitalar para gestão de pacientes.</h1>
+      <p>
+        S-Clinical está aqui para otimizar a gestão, garantir um atendimento 
+        ágil e humanizado, e oferecer a melhor experiência para sua equipe e pacientes.
+      </p>
+      
+      <div class="hero-buttons">
+        <p-button label="Iniciar Atendimento!" (onClick)="routerTo('/atendimento')" [rounded]="true" size="large"></p-button>
+      </div>
+    </div>
+
+    <div class="hero-image-container">
+      <img src="https://agathos.com.br/wp-content/uploads/2023/06/atendimento_hospitalar_4-1024x683.jpg" 
+           alt="Equipe médica em ambiente hospitalar moderno" class="hero-image">
+      
+      <div class="floating-card card-1">
+        <i class="pi pi-file-medical icon"></i>
+        <span>Prontuários Eletrônicos</span>
+      </div>
+
+      <div class="floating-card card-2">
+        <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&cs=tinysrgb&w=120&h=120&dpr=1" alt="Dra. Ana Paula">
+        <div class="doctor-info">
+          <strong>Dra. Ana Paula</strong>
+          <span>Chefe de Clínica</span>
+        </div>
+      </div>
+      
+      <div class="floating-card card-3">
+        <i class="pi pi-users icon"></i>
+        <span>Gestão de Triagem</span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="hero-stats">
+    <div class="stat">
+      <h3>200K+</h3>
+      <span>Atendimentos Realizados</span>
+    </div>
+    <div class="stat">
+      <h3>500+</h3>
+      <span>Profissionais Conectados</span>
+    </div>
+    <div class="stat">
+      <h3>98%</h3>
+      <span>Satisfação de Pacientes</span>
+    </div>
+  </footer>
+</div>

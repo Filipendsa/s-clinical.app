@@ -1,0 +1,64 @@
+<div class="form-container">
+
+    @if(isLoading()) {
+        <div class="skeleton-form p-4">
+            <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton height="2.5rem" styleClass="mb-3"></p-skeleton>
+            <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton height="2.5rem" styleClass="mb-3"></p-skeleton>
+            <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton height="2.5rem" styleClass="mb-3"></p-skeleton>
+            <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+            <p-skeleton height="2.5rem" styleClass="mb-3"></p-skeleton>
+        </div>
+    }
+
+    @if(!isLoading()) {
+        <form [formGroup]="patientForm" (ngSubmit)="save()" class="p-4">
+
+            <div class="field-group">
+                <label for="name">Nome Completo *</label>
+                <input id="name" type="text" pInputText formControlName="name" />
+                @if (f['name'].invalid && f['name'].touched) {
+                    <p-message severity="error" text="Nome é obrigatório (mín. 3 caracteres)"></p-message>
+                }
+            </div>
+
+            <div class="field-group">
+                <label for="phoneNumber">Telefone *</label>
+                <input id="phoneNumber" type="text" pInputText formControlName="phoneNumber" />
+                 @if (f['phoneNumber'].invalid && f['phoneNumber'].touched) {
+                    <p-message severity="error" text="Telefone é obrigatório"></p-message>
+                }
+            </div>
+
+            <div class="field-group">
+                <label for="email">Email *</label>
+                <input id="email" type="email" pInputText formControlName="email" />
+                 @if (f['email'].invalid && f['email'].touched) {
+                    <p-message severity="error" text="Formato de e-mail inválido"></p-message>
+                }
+            </div>
+
+            <div class="field-group">
+                <label for="gender">Gênero *</label>
+                <p-select 
+                    id="gender"
+                    formControlName="gender"
+                    [options]="genderOptions"
+                    optionLabel="label"
+                    optionValue="value"
+                    placeholder="Selecione o gênero">
+                </p-select>
+                 @if (f['gender'].invalid && f['gender'].touched) {
+                    <p-message severity="error" text="Gênero é obrigatório"></p-message>
+                }
+            </div>
+
+            <div class="dialog-footer">
+                <p-button label="Cancelar" [text]="true" (click)="closeModal(false)"></p-button>
+                <p-button label="Salvar" type="submit" [loading]="isLoading()" [disabled]="patientForm.invalid"></p-button>
+            </div>
+        </form>
+    }
+</div>
