@@ -1,0 +1,269 @@
+[
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "CreateClinicalCare",
+    "RelativePath": "api/ClinicalCare",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "CreateClinicalCareCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "GetClinicalCares",
+    "RelativePath": "api/ClinicalCare",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "GetClinicalCareById",
+    "RelativePath": "api/ClinicalCare/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "DeleteClinicalCare",
+    "RelativePath": "api/ClinicalCare/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "UpdateStatus",
+    "RelativePath": "api/ClinicalCare/{id}/status",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "S_Clinical.Application.ClinicalCares.Commands.UpdateClinicalCareStatusCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "GetAwaitingTriage",
+    "RelativePath": "api/ClinicalCare/awaiting-triage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "GetCompletedTriage",
+    "RelativePath": "api/ClinicalCare/completed-triage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "GetNextSequential",
+    "RelativePath": "api/ClinicalCare/next-sequential",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.PatientController",
+    "Method": "CreatePatient",
+    "RelativePath": "api/Patient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "CreatePatientCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.PatientController",
+    "Method": "GetPatients",
+    "RelativePath": "api/Patient",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.PatientController",
+    "Method": "GetPatientById",
+    "RelativePath": "api/Patient/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.PatientController",
+    "Method": "UpdatePatient",
+    "RelativePath": "api/Patient/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "UpdatePatientCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.PatientController",
+    "Method": "DeletePatient",
+    "RelativePath": "api/Patient/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.TriageController",
+    "Method": "CreateTriage",
+    "RelativePath": "api/Triage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "S_Clinical.Application.Triages.Commands.CreateTriageCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.TriageController",
+    "Method": "GetPatients",
+    "RelativePath": "api/Triage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.TriageController",
+    "Method": "GetTriageById",
+    "RelativePath": "api/Triage/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.TriageController",
+    "Method": "UpdateTriage",
+    "RelativePath": "api/Triage/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "S_Clinical.Application.Triages.Commands.UpdateTriageCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "S_Clinical.Controllers.TriageController",
+    "Method": "DeleteTriage",
+    "RelativePath": "api/Triage/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
