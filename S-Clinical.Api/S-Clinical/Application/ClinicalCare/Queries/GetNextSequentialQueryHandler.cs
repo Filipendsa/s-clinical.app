@@ -1,7 +1,5 @@
 ﻿using MediatR;
 using S_Clinical.Domain.Interface;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace S_Clinical.Application.ClinicalCares.Queries
 {

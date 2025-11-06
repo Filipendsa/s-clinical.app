@@ -29,10 +29,51 @@
             font-weight: 500;
             font-size: 2rem;
             transition: color 0.2s;
-
+            cursor: pointer;
             &:hover {
                 color: var(--p-emerald-700);
             }
         }
+    }
+}
+
+.queue-status {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+}
+
+.queue-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+
+    i {
+        font-size: 1rem;
+    }
+
+    strong {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    &.awaiting-triage {
+        background-color: var(--p-orange-100);
+        color: var(--p-orange-900);
+    }
+
+    &.current-triage {
+        background-color: var(--p-yellow-100);
+        color: var(--p-yellow-900);
+    }
+
+    &.awaiting-care {
+        background-color: var(--p-blue-100);
+        color: var(--p-blue-900);
     }
 }

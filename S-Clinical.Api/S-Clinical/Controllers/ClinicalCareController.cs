@@ -50,6 +50,14 @@ namespace S_Clinical.Controllers
             return Ok(new { nextNumber = nextNumber });
         }
 
+        [HttpGet("queue-summary")]
+        public async Task<IActionResult> GetQueueSummary()
+        {
+            var query = new GetQueueSummaryQuery();
+            var summary = await _mediator.Send(query);
+            return Ok(summary);
+        }
+
         [HttpPatch("{id}/status")]
         public async Task<IActionResult> UpdateStatus(int id, [FromBody] UpdateClinicalCareStatusCommand command)
         {

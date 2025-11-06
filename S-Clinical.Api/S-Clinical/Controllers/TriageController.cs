@@ -25,11 +25,11 @@ namespace S_Clinical.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetPatients()
+        public async Task<IActionResult> GetTriage()
         {
             var query = new GetAllTriagesQuery();
-            var patients = await _mediator.Send(query);
-            return Ok(patients);
+            var triages = await _mediator.Send(query);
+            return Ok(triages);
         }
 
         [HttpGet("{id}")]

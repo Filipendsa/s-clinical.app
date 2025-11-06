@@ -74,5 +74,19 @@ namespace S_Clinical.Infrastructure.Repositories
                 .AsNoTracking()
                 .ToListAsync();
         }
+
+        public async Task<int> GetCountByStatusAsync(CareStatusTypeEnum status, bool today = true)
+        {
+            var query = _context.ClinicalCares
+                .Where(c => (int)c.StatusType == (int)status);
+
+            if (today == true)
+            {
+                var todayDate = DateTime.Today;
+                query = query.Where(c => c.DateTimeArrival >= todayDate);
+            }
+
+            return await query.CountAsync();
+        }
     }
 }

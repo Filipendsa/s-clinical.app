@@ -1,14 +1,34 @@
-  <p-toolbar styleClass="hero-toolbar">
-    <ng-template pTemplate="start">
-      <nav class="main-menu">
-        <a href="/" class="logo">S-Clinical</a>
-        <a href="/atendimento">Atendimento</a>
-        <a href="/paciente">Paciente</a>
-        <a href="/triagem">Triagem</a>
-      </nav>
-    </ng-template>
+<p-toolbar styleClass="hero-toolbar">
+  <ng-template pTemplate="start">
+    <nav class="main-menu">
+      <a href="/"
+         class="logo">S-Clinical</a>
+      <a href="/atendimento">Atendimento</a>
+      <a href="/paciente">Paciente</a>
+      <a href="/triagem">Triagem</a>
+      @if (queueSummary() ; as summary) {
+      <div class="queue-status">
+        <span class="queue-item awaiting-triage">
+          <i class="pi pi-users"></i>
+          Aguard. Triagem: <strong>{{ summary.awaitingTriageCount }}</strong>
+        </span>
+        <span class="queue-item current-triage">
+          <i class="pi pi-sort-numeric-up"></i>
+          Número atual para triagem: <strong>{{ currentTriageNumber }}</strong>
+        </span>
+        <span class="queue-item awaiting-care">
+          <i class="pi pi-user-edit"></i>
+          Aguard. Atendimento: <strong>{{ summary.awaitingCareCount }}</strong>
+        </span>
+      </div>
+      }
+    </nav>
+  </ng-template>
 
-    <ng-template pTemplate="end">
-      <p-button label="Contato" (onClick)="navigateTo('https://www.linkedin.com/in/filipe-nogueira07/')" [rounded]="true" size="large"></p-button>
-    </ng-template>
-  </p-toolbar>
+  <ng-template pTemplate="end">
+    <p-button label="Contato"
+              (onClick)="navigateTo('https://www.linkedin.com/in/filipe-nogueira07/')"
+              [rounded]="true"
+              size="large"></p-button>
+  </ng-template>
+</p-toolbar>

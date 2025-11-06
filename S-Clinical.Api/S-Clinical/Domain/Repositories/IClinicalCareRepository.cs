@@ -13,5 +13,6 @@ namespace S_Clinical.Domain.Interface
         Task<int> GetNextSequentialNumberAsync();
         Task<List<ClinicalCare>> GetByStatusAsync(CareStatusTypeEnum status);
         Task<List<ClinicalCare>> GetCompletedAsync();
+        Task<int> GetCountByStatusAsync(CareStatusTypeEnum status, bool today);
     }
 }

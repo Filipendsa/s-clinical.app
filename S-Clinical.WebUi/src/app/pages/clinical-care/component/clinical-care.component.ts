@@ -53,7 +53,7 @@ export class ClinicalCareComponent implements OnInit {
     ];
   }
 
-  loadCares(): void {
+  protected loadCares(): void {
     this.careService.getAll().subscribe({
       next: (cares) => {
         if (!cares) return;
@@ -69,7 +69,7 @@ export class ClinicalCareComponent implements OnInit {
     });
   }
 
-  openFormModal(careId?: number): void {
+  protected openFormModal(careId?: number): void {
     const ref = this.dialogService.open(ClinicalCareFormComponent, {
       header: careId ? 'Editar Atendimento' : 'Novo Atendimento',
       width: '40%',
@@ -93,7 +93,7 @@ export class ClinicalCareComponent implements OnInit {
     }
   }
 
-  deleteCare(id: number): void {
+  protected deleteCare(id: number): void {
     this.confirmationService.confirm({
       message: 'Tem certeza que deseja excluir este atendimento?',
       header: 'Confirmação',
@@ -122,17 +122,42 @@ export class ClinicalCareComponent implements OnInit {
     });
   }
 
-  getStatusSeverity(status: string): 'success' | 'secondary' | 'info' | 'warn' | 'danger' | 'contrast' | undefined | null {
+  protected getCareStatus(status: number): string {
     switch (status) {
-      case 'WAITING_CARE':
+      case 0:
+        return 'Aguardando Triagem';
+      case 1:
+        return 'Em Triagem';
+      case 2:
+        return 'Aguardando Atendimento';
+      case 3:
+        return 'Em Atendimento';
+      case 4:
+        return 'Em Observação';
+      case 5:
+        return 'Internado';
+      case 6:
+        return 'Em Medicação';
+      case 7:
+        return 'Alta';
+      case 8:
+        return 'Óbito';
+      default:
+        return 'Desconhecido';
+    }
+  }
+
+  protected getStatusSeverity(status: number): 'success' | 'secondary' | 'info' | 'warn' | 'danger' | 'contrast' | undefined | null {
+    switch (status) {
+      case 0:
         return 'warn';
-      case 'RECEIVING_CARE':
+      case 1:
         return 'info';
-      case 'IN_TRIAGE':
+      case 2:
         return 'info';
-      case 'DISCHARGED':
+      case 3:
         return 'success';
-      case 'DECEASED':
+      case 4:
         return 'danger';
       default:
         return 'secondary';

@@ -2,9 +2,9 @@
 {
     public enum CareStatusTypeEnum
     {
-        WAITING_TRIAGE,
-        IN_TRIAGE,
-        WAITING_CARE,
+        WAITING_TRIAGE, //0
+        IN_TRIAGE,//1
+        WAITING_CARE,//2
         RECEIVING_CARE,
         UNDER_OBSERVATION,
         INPATIENT,

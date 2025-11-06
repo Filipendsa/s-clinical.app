@@ -109,6 +109,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "S_Clinical.Controllers.ClinicalCareController",
+    "Method": "GetQueueSummary",
+    "RelativePath": "api/ClinicalCare/queue-summary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "S_Clinical.Controllers.PatientController",
     "Method": "CreatePatient",
     "RelativePath": "api/Patient",
@@ -205,7 +215,7 @@
   },
   {
     "ContainingType": "S_Clinical.Controllers.TriageController",
-    "Method": "GetPatients",
+    "Method": "GetTriage",
     "RelativePath": "api/Triage",
     "HttpMethod": "GET",
     "IsController": true,

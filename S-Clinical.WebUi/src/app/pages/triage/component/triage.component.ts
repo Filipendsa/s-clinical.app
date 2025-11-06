@@ -58,7 +58,7 @@ export class TriageComponent implements OnInit {
     ];
   }
 
-  loadAllData(): void {
+  protected loadAllData(): void {
     forkJoin({
       awaiting: this.careService.getAwaitingTriage(),
       completed: this.careService.getCompletedTriage()
@@ -77,7 +77,7 @@ export class TriageComponent implements OnInit {
     });
   }
 
-  openTriageForm(careId: number): void {
+  protected openTriageForm(careId: number): void {
     const ref = this.dialogService.open(TriageFormComponent, {
       header: 'Preencher Triagem',
       width: '40%',
@@ -94,11 +94,11 @@ export class TriageComponent implements OnInit {
     }
   }
 
-  openEditForm(triageId: number): void {
+  protected openEditForm(triageId: number): void {
     console.log('Editar Triagem ID:', triageId);
   }
 
-  deleteTriage(triageId: number): void {
+  protected deleteTriage(triageId: number): void {
     this.confirmationService.confirm({
       message: 'Tem certeza que deseja excluir esta triagem?',
       accept: () => {

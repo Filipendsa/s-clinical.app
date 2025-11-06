@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|c:\\repos\\me\\s-clinic.app\\s-clinical.api\\s-clinical\\domain\\repositories\\iclinicalcarerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|solutionrelative:s-clinical\\domain\\repositories\\iclinicalcarerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|c:\\repos\\me\\s-clinic.app\\s-clinical.api\\s-clinical\\infrastructure\\repositories\\clinicalcarerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|solutionrelative:s-clinical\\infrastructure\\repositories\\clinicalcarerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|c:\\repos\\me\\s-clinic.app\\s-clinical.api\\s-clinical\\application\\clinicalcare\\queries\\getqueuesummaryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|solutionrelative:s-clinical\\application\\clinicalcare\\queries\\getqueuesummaryqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|c:\\repos\\me\\s-clinic.app\\s-clinical.api\\s-clinical\\domain\\enum\\carestatustype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|solutionrelative:s-clinical\\domain\\enum\\carestatustype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|c:\\repos\\me\\s-clinic.app\\s-clinical.api\\s-clinical\\application\\clinicalcare\\queries\\getqueuesummaryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9FBC0F6F-1335-4984-83DC-03C816488308}|S-Clinical\\S-Clinical.csproj|solutionrelative:s-clinical\\application\\clinicalcare\\queries\\getqueuesummaryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 24,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,6 +127,71 @@
             {
               "$type": "Bookmark",
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IClinicalCareRepository.cs",
+              "DocumentMoniker": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Domain\\Repositories\\IClinicalCareRepository.cs",
+              "RelativeDocumentMoniker": "S-Clinical\\Domain\\Repositories\\IClinicalCareRepository.cs",
+              "ToolTip": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Domain\\Repositories\\IClinicalCareRepository.cs",
+              "RelativeToolTip": "S-Clinical\\Domain\\Repositories\\IClinicalCareRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T19:21:26.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClinicalCareRepository.cs",
+              "DocumentMoniker": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Infrastructure\\Repositories\\ClinicalCareRepository.cs",
+              "RelativeDocumentMoniker": "S-Clinical\\Infrastructure\\Repositories\\ClinicalCareRepository.cs",
+              "ToolTip": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Infrastructure\\Repositories\\ClinicalCareRepository.cs",
+              "RelativeToolTip": "S-Clinical\\Infrastructure\\Repositories\\ClinicalCareRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAvwE0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T19:21:35.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CareStatusType.cs",
+              "DocumentMoniker": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Domain\\Enum\\CareStatusType.cs",
+              "RelativeDocumentMoniker": "S-Clinical\\Domain\\Enum\\CareStatusType.cs",
+              "ToolTip": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Domain\\Enum\\CareStatusType.cs",
+              "RelativeToolTip": "S-Clinical\\Domain\\Enum\\CareStatusType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T19:20:23.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetQueueSummaryQueryHandler.cs",
+              "DocumentMoniker": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQueryHandler.cs",
+              "RelativeDocumentMoniker": "S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQueryHandler.cs",
+              "ToolTip": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQueryHandler.cs",
+              "RelativeToolTip": "S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T19:05:15.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetQueueSummaryQuery.cs",
+              "DocumentMoniker": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQuery.cs",
+              "RelativeDocumentMoniker": "S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQuery.cs",
+              "ToolTip": "C:\\Repos\\Me\\s-clinic.app\\S-Clinical.Api\\S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQuery.cs",
+              "RelativeToolTip": "S-Clinical\\Application\\ClinicalCare\\Queries\\GetQueueSummaryQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T19:05:13.952Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -332,3 +332,4 @@ C:\Repos\Me\s-clinic.app\S-Clinical.Api\S-Clinical\obj\Debug\net9.0\staticwebass
 C:\Repos\Me\s-clinic.app\S-Clinical.Api\S-Clinical\obj\Debug\net9.0\S-Clinical.csproj.Up2Date
 C:\Repos\Me\s-clinic.app\S-Clinical.Api\S-Clinical\obj\Debug\net9.0\S-Clinical.genruntimeconfig.cache
 C:\Repos\Me\s-clinic.app\S-Clinical.Api\S-Clinical\obj\Debug\net9.0\ref\S-Clinical.dll
+C:\Repos\Me\s-clinic.app\S-Clinical.Api\S-Clinical\obj\Debug\net9.0\S-Clinical.sourcelink.json

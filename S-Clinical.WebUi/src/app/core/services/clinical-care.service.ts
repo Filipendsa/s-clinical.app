@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { map, Observable, of } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { ClinicalCareDetails } from '../models/clinical-care.model';
+import { QueueSummary } from '../../shared/components/toolbar/toolbar';
 
 
 /**
@@ -109,6 +110,15 @@ export class ClinicalCareService {
    */
   public getCompletedTriage(): Observable<ClinicalCareDetails[]> {
     return this.http.get<ClinicalCareDetails[]>(`${this.apiUrl}/completed-triage`);
+  }
+
+  /**
+   * Retrieves a summary of the current clinical care queue.
+   *
+   * @returns An Observable emitting the {@link QueueSummary} object containing queue details.
+   */
+  public getQueueSummary(): Observable<QueueSummary> {
+    return this.http.get<QueueSummary>(`${this.apiUrl}/queue-summary`);
   }
 
 }

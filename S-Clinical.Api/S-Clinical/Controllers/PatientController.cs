@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using S_Clinical.Application.Patients.Queries;
-using S_Clinical.Application.Patients.Commands;
 
 namespace S_Clinical.Controllers
 {
